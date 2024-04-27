@@ -1,17 +1,14 @@
 :root {
-    /* --pb-fill-color: #f0; */
+    /* --pb-fill-color: #f33; */
     --pb-height: 20px;
     /* --pb-width: 45px */
+    font-family: monospace;
 }
 
 input[type=button] {
     /* margin-bottom: 1rem; */
     padding: .3rem .5rem;
     width: 54px;
-}
-
-html {
-    height: 100vh;
 }
 
 *, *::before, *::after {
@@ -23,8 +20,16 @@ html {
 body {
     display: flex;
     flex-direction: column;
+    height: 100vh;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
     height: 100%;
-    justify-content: center;
+    justify-content:center;
     align-items: center;
 }
 
@@ -49,4 +54,87 @@ body {
 h1 {
     margin-bottom: 1rem;
     font-weight: 100;
+}
+
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-block: 1rem;
+    color: #333;
+}
+
+footer a {
+    margin-left: .5rem;
+    color:initial;
+    transition: all .3s ease-in-out;
+}
+
+footer a:hover {
+    color:#f55;
+}
+
+.link {
+    margin-block: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.link i {
+    margin: 0.2rem;
+}
+
+.link a {
+    color: initial;
+}
+
+.link a:hover {
+    color:#f55;
+}
+
+footer span {
+    display: inline-block;
+    transform: rotate(-90deg);
+    color:#f55;
+    font-size: .7rem;
+    padding: 0 1rem;
+}
+
+.property {
+    color:#f55;
+}
+
+.equal {
+    color: cadetblue;
+}
+
+code {
+    color: #fff;
+    /* width: 232px; */
+    border: 1px solid #0003;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: #555;
+    margin-bottom: 1rem;
+}
+
+code input {
+    border: none;
+    appearance: none;
+    outline:none;
+    color:orange;
+    background: #333;
+    width: fit-content;
+    -webkit-appearance: none;
+    text-align: center;
+    padding: 0.1rem;
+    border-radius: .5rem;
+}
+
+code input::-webkit-outer-spin-button,
+code input::-webkit-inner-spin-button
+ {
+    -webkit-appearance: none;
+    display: none;
 }
