@@ -3,3 +3,50 @@
     --pb-height: 20px;
     /* --pb-width: 45px */
 }
+
+input[type=button] {
+    /* margin-bottom: 1rem; */
+    padding: .3rem .5rem;
+    width: 54px;
+}
+
+html {
+    height: 100vh;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    margin-top: 1rem;
+}
+
+.buttons input {
+    border: 2px solid #000;
+}
+
+.buttons input:hover {
+    /* border-color: #f55; */
+    background: #f55;
+}
+
+.buttons input:active {
+    color: #fff;
+    border-color: #000;
+}
+
+h1 {
+    margin-bottom: 1rem;
+    font-weight: 100;
+}

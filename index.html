@@ -8,12 +8,29 @@
 </head>
 <body>
 
+    <h1>Progress Bar Web Component</h1>
+
     <progress-bar percent="100"></progress-bar>
+    <div class="buttons">
+        <input type="button" class="dnbtn" value="Down">
+    <input type="button" class="upbtn" value="Up">
+    </div>
 
 
     <script src="scripts/progress-bar.js"></script>
     <script>
         const nProgressBar = document.querySelector('progress-bar');
+        const upBtn = document.querySelector(".upbtn");
+        const dnBtn = document.querySelector(".dnbtn");
+
+        upBtn.onclick = function() {
+            nProgressBar.percent++;
+        }
+
+        dnBtn.onclick = function() {
+            nProgressBar.percent--;
+        }
+
         // const percentage = document.querySelector('.percentage');
         nProgressBar.percent = 49;
 
