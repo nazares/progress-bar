@@ -4,34 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <title>Progress Bar Web Component</title>
 </head>
 <body>
+    <div class="container">
+        <h1>Progress Bar Web Component</h1>
 
-    <h1>Progress Bar Web Component</h1>
+        <code>nProgressBar.<span class="property">percent</span> <span class="equal">=</span> <span class="number"><input type="number" value="49" min="0" max="100"></span></code>
 
-    <progress-bar percent="100"></progress-bar>
-    <div class="buttons">
-        <input type="button" class="dnbtn" value="Down">
-    <input type="button" class="upbtn" value="Up">
+        <progress-bar percent="100"></progress-bar>
+        <div class="buttons">
+            <input type="button" class="dnbtn" value="Down">
+            <input type="button" class="upbtn" value="Up">
+        </div>
+        <p class="link">source code on: <i class="fab fa-github"></i><a href="https://github.com/nazares/progress-bar">GitHub</a></p>
     </div>
 
+    <footer>powered with <span>&lt;3</span> by <a href="https://nazares.ru">nazares</a></footer>
 
     <script src="scripts/progress-bar.js"></script>
     <script>
         const nProgressBar = document.querySelector('progress-bar');
         const upBtn = document.querySelector(".upbtn");
         const dnBtn = document.querySelector(".dnbtn");
+        const code = document.querySelector(".number input");
+
+        code.onchange = function() {
+            nProgressBar.percent = code.value;
+            code.value = nProgressBar.percent;
+        }
 
         upBtn.onclick = function() {
             nProgressBar.percent++;
+            code.value = nProgressBar.percent;
         }
 
         dnBtn.onclick = function() {
             nProgressBar.percent--;
+            code.value = nProgressBar.percent;
         }
 
-        // const percentage = document.querySelector('.percentage');
         nProgressBar.percent = 49;
 
     </script>
